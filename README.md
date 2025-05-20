@@ -3,7 +3,7 @@
 > ⚠️ **Unofficial Flutter plugin** for integrating Nexi/XPay payments on Android and iOS.
 
 [![Pub](https://img.shields.io/pub/v/flutter_nexi.svg)](https://pub.dev/packages/flutter_nexi)
-![Dart CI](https://github.com/AngeloAvv/flutter_nexi/workflows/Pipeline/badge.svg)
+![Pipeline](https://github.com/AngeloAvv/flutter_nexi/workflows/Pipeline/badge.svg)
 [![Star on GitHub](https://img.shields.io/github/stars/AngeloAvv/flutter_nexi.svg?style=flat&logo=github&colorB=deeppink&label=stars)](https://github.com/AngeloAvv/flutter_nexi)
 [![License: GPLv3](https://img.shields.io/badge/license-GPLv3-purple.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/AngeloAvv)
@@ -84,4 +84,4 @@ class _MyAppState extends State<MyApp> {
 
 ## License
 
-Flutter Flavorizr is available under the GPLv3 license. See the COPYING file for more info.
+`flutter_nexi` is available under the GPLv3 license. See the COPYING file for more info.
