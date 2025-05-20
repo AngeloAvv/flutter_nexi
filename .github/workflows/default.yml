@@ -1,0 +1,43 @@
+name: Pipeline
+
+on:
+  pull_request:
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+#  test:
+#    name: Testing
+#    uses: ./.github/workflows/test.yml
+
+  analyze:
+    name: Testing
+    uses: ./.github/workflows/analyze.yml
+
+  build:
+    name: Build (${{ matrix.platform }})
+    needs:
+#      - test
+      - analyze
+    strategy:
+      matrix:
+        platform: [ android, ios ]
+    uses: ./.github/workflows/build.yml
+    with:
+      platform: ${{ matrix.platform }}
+      working-directory: example
+
+  release:
+    needs:
+      - build
+    name: Release
+    uses: ./.github/workflows/release.yml
+
+  publish:
+    needs:
+      - release
+    name: Publish
+    uses: ./.github/workflows/publish.yml
