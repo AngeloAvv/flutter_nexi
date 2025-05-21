@@ -82,6 +82,32 @@ class _MyAppState extends State<MyApp> {
 }
 ```
 
+## 🔐 ProGuard Configuration (Android)
+
+If you're building a **release version** of your app with **code shrinking and obfuscation** enabled (e.g., using R8 or ProGuard), you must add the following rules to prevent breaking Nexi's SDK functionality.
+
+### ➕ Add to `android/app/proguard-rules.pro`:
+
+```proguard
+## Nexi Rules
+-keep class it.angelocassano.flutter_nexi.**  { *; }
+-keep class it.nexi.xpay.**  { *; }
+
+# Suppress warnings for 3DS SDK classes
+-dontwarn com.nets.igfs_3ds_sdk_android.dto.project.AuthenticationRequestParameters
+-dontwarn com.nets.igfs_3ds_sdk_android.dto.project.ChallengeParameters
+-dontwarn com.nets.igfs_3ds_sdk_android.dto.project.ConfigParameters
+-dontwarn com.nets.igfs_3ds_sdk_android.dto.protocol.ErrorMessage
+-dontwarn com.nets.igfs_3ds_sdk_android.event.CompletionEvent
+-dontwarn com.nets.igfs_3ds_sdk_android.event.ProtocolErrorEvent
+-dontwarn com.nets.igfs_3ds_sdk_android.event.RuntimeErrorEvent
+-dontwarn com.nets.igfs_3ds_sdk_android.graphics.IUiCustomization
+-dontwarn com.nets.igfs_3ds_sdk_android.graphics.UiCustomization
+-dontwarn com.nets.igfs_3ds_sdk_android.service.IChallengeStatusReceiver
+-dontwarn com.nets.igfs_3ds_sdk_android.service.ITransaction
+-dontwarn com.nets.igfs_3ds_sdk_android.service.impl.ThreeDS2Service
+```
+
 ## License
 
 `flutter_nexi` is available under the GPLv3 license. See the COPYING file for more info.

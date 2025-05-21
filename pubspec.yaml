@@ -1,5 +1,5 @@
 name: flutter_nexi
-description: "A new Flutter project."
+description: "Unofficial Flutter plugin for integrating Nexi/XPay payments on Android and iOS."
 version: 1.0.0
 repository: https://github.com/AngeloAvv/flutter_nexi
 issue_tracker: https://github.com/AngeloAvv/flutter_nexi/issues

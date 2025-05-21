@@ -4,14 +4,14 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_nexi'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter project.'
+  s.version          = '1.0.0'
+  s.summary          = 'Unofficial Flutter plugin for integrating Nexi/XPay payments on Android and iOS.'
   s.description      = <<-DESC
-A new Flutter project.
+Unofficial Flutter plugin for integrating Nexi/XPay payments on Android and iOS.
                        DESC
-  s.homepage         = 'http://example.com'
-  s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.homepage         = 'https://www.angelocassano.it'
+  s.license          = { :file => '../COPYING' }
+  s.author           = { 'Angelo Cassano' => 'commerciale@angelocassano.it' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
