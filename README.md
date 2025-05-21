@@ -110,4 +110,4 @@ If you're building a **release version** of your app with **code shrinking and o
 
 ## License
 
-`flutter_nexi` is available under the GPLv3 license. See the COPYING file for more info.
+`flutter_nexi` is available under the GPLv3 license. See the LICENSE file for more info.

@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 Unofficial Flutter plugin for integrating Nexi/XPay payments on Android and iOS.
                        DESC
   s.homepage         = 'https://www.angelocassano.it'
-  s.license          = { :file => '../COPYING' }
+  s.license          = { :file => '../LICENSE' }
   s.author           = { 'Angelo Cassano' => 'commerciale@angelocassano.it' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
