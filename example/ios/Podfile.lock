@@ -1,6 +1,6 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_nexi (0.0.1):
+  - flutter_nexi (1.0.0):
     - Flutter
     - Nexi_XPay (= 1.4.5)
   - integration_test (0.0.1):
@@ -25,11 +25,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/integration_test/ios"
 
 SPEC CHECKSUMS:
-  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_nexi: a1268b8f21e1515c77ff7ec72d3fef13ff0de7b6
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  flutter_nexi: fc668c977540a6bf7268d421504d937bd42e7d3d
   integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
   Nexi_XPay: cb6542e59876e56cf7d595336287ff2842d3645c
 
-PODFILE CHECKSUM: 4305caec6b40dde0ae97be1573c53de1882a07e5
+PODFILE CHECKSUM: 3c63482e143d1b91d2d2560aee9fb04ecc74ac7e
 
 COCOAPODS: 1.16.2
