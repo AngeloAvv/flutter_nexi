@@ -1,11 +1,22 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 
 group = "it.angelocassano.flutter_nexi"
 version = "1.0-SNAPSHOT"
 
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+}
+
+// Flutter is migrating to Built-in Kotlin (AGP >= 9 ships Kotlin support natively).
+// Apply the classic Kotlin Android plugin only when the host app's AGP is still < 9,
+// so this plugin keeps building on Flutter versions/toolchains that don't yet enable
+// Built-in Kotlin (requires Flutter 3.47+), while being ready for when they do.
+// See: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-plugin-authors
+val agpMajor = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.substringBefore('.').toInt()
+
+if (agpMajor < 9) {
+    apply(plugin = "org.jetbrains.kotlin.android")
 }
 
 allprojects {
@@ -73,7 +84,7 @@ android {
     }
 }
 
-kotlin {
+project.extensions.configure(KotlinAndroidProjectExtension::class.java) {
     compilerOptions {
         jvmTarget.set(JvmTarget.JVM_11)
     }
