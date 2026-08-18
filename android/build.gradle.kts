@@ -19,13 +19,6 @@ if (agpMajor < 9) {
     apply(plugin = "org.jetbrains.kotlin.android")
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
 rootProject.allprojects {
     repositories {
         google()
@@ -52,14 +45,14 @@ android {
     }
 
     defaultConfig {
-        minSdk = 21
+        minSdk = 24
     }
 
     dependencies {
         testImplementation("org.jetbrains.kotlin:kotlin-test")
         testImplementation("org.mockito:mockito-core:5.23.0")
 
-        implementation("com.android.support.constraint:constraint-layout:2.0.4")
+        implementation("androidx.constraintlayout:constraintlayout:2.2.1")
         implementation("androidx.appcompat:appcompat:1.7.1")
         implementation("com.android.volley:volley:1.2.1")
         implementation("com.google.code.gson:gson:2.14.0")
