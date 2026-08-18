@@ -39,7 +39,7 @@ rootProject.allprojects {
 android {
     namespace = "it.angelocassano.flutter_nexi"
 
-    compileSdk = 37
+    compileSdk = 36
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
