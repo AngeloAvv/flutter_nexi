@@ -48,14 +48,13 @@ android {
         testImplementation("org.jetbrains.kotlin:kotlin-test")
         testImplementation("org.mockito:mockito-core:5.23.0")
 
-        implementation("com.android.support:appcompat-v7:28.0.0")
         implementation("com.android.support.constraint:constraint-layout:2.0.4")
         implementation("androidx.appcompat:appcompat:1.7.1")
         implementation("com.android.volley:volley:1.2.1")
         implementation("com.google.code.gson:gson:2.14.0")
         implementation("com.google.android.material:material:1.14.0")
         implementation("com.google.android.gms:play-services-wallet:20.0.0")
-        implementation("com.android.support:customtabs:28.0.0")
+        implementation("androidx.browser:browser:1.8.0")
 
         add("api", mapOf("name" to "XPaySDK_v1.4.9", "ext" to "aar"))
     }
