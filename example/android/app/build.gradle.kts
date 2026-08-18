@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "it.angelocassano.flutter_nexi_example"
-    compileSdk = flutter.compileSdkVersion
+    compileSdk = 37
     ndkVersion = flutter.ndkVersion
 
     compileOptions {

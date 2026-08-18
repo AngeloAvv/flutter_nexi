@@ -39,7 +39,7 @@ rootProject.allprojects {
 android {
     namespace = "it.angelocassano.flutter_nexi"
 
-    compileSdk = 35
+    compileSdk = 37
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -65,7 +65,7 @@ android {
         implementation("com.google.code.gson:gson:2.14.0")
         implementation("com.google.android.material:material:1.14.0")
         implementation("com.google.android.gms:play-services-wallet:20.0.0")
-        implementation("androidx.browser:browser:1.8.0")
+        implementation("androidx.browser:browser:1.9.0")
 
         add("api", mapOf("name" to "XPaySDK_v1.4.92", "ext" to "aar"))
     }
