@@ -56,7 +56,7 @@ android {
         implementation("com.google.android.gms:play-services-wallet:20.0.0")
         implementation("androidx.browser:browser:1.8.0")
 
-        add("api", mapOf("name" to "XPaySDK_v1.4.9", "ext" to "aar"))
+        add("api", mapOf("name" to "XPaySDK_v1.4.92", "ext" to "aar"))
     }
 
     testOptions {
