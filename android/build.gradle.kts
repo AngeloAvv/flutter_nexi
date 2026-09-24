@@ -50,7 +50,7 @@ android {
 
     dependencies {
         testImplementation("org.jetbrains.kotlin:kotlin-test")
-        testImplementation("org.mockito:mockito-core:5.23.0")
+        testImplementation("org.mockito:mockito-core:5.24.0")
 
         implementation("androidx.constraintlayout:constraintlayout:2.2.2")
         implementation("androidx.appcompat:appcompat:1.8.0")
