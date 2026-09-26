@@ -9,18 +9,18 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-#  test:
-#    name: Testing
-#    uses: ./.github/workflows/test.yml
+  test:
+    name: Test
+    uses: ./.github/workflows/test.yml
 
   analyze:
-    name: Testing
+    name: Analyze
     uses: ./.github/workflows/analyze.yml
 
   build:
     name: Build (${{ matrix.platform }})
     needs:
-#      - test
+      - test
       - analyze
     strategy:
       matrix:

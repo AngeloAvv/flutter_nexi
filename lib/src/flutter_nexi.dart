@@ -7,13 +7,10 @@ class FlutterNexi {
   final PaymentApi _service;
 
   FlutterNexi({
-    required String secretKey,
-    String? domain,
-    Environment environment = Environment.test,
-  }) : _secretKey = secretKey,
-       _domain = domain,
-       _environment = environment,
-       _service = PaymentApi();
+    required this._secretKey,
+    this._domain,
+    this._environment = Environment.test,
+  }) : _service = PaymentApi();
 
   Future<PaymentResult> pay({
     required String alias,
