@@ -1,22 +1,10 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 
 group = "it.angelocassano.flutter_nexi"
 version = "1.0-SNAPSHOT"
 
 plugins {
     id("com.android.library")
-}
-
-// Flutter is migrating to Built-in Kotlin (AGP >= 9 ships Kotlin support natively).
-// Apply the classic Kotlin Android plugin only when the host app's AGP is still < 9,
-// so this plugin keeps building on Flutter versions/toolchains that don't yet enable
-// Built-in Kotlin (requires Flutter 3.47+), while being ready for when they do.
-// See: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-plugin-authors
-val agpMajor = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.substringBefore('.').toInt()
-
-if (agpMajor < 9) {
-    apply(plugin = "org.jetbrains.kotlin.android")
 }
 
 rootProject.allprojects {
@@ -35,8 +23,8 @@ android {
     compileSdk = 36
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     sourceSets {
@@ -60,7 +48,8 @@ android {
         implementation("com.google.android.gms:play-services-wallet:20.0.0")
         implementation("androidx.browser:browser:1.10.0")
 
-        add("api", mapOf("name" to "XPaySDK_v1.4.92", "ext" to "aar"))
+        // Single-string notation: the map form fails with an error in Gradle 10.
+        add("api", ":XPaySDK_v1.4.92@aar")
     }
 
     testOptions {
@@ -77,8 +66,8 @@ android {
     }
 }
 
-project.extensions.configure(KotlinAndroidProjectExtension::class.java) {
+kotlin {
     compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_11)
+        jvmTarget = JvmTarget.JVM_17
     }
 }
