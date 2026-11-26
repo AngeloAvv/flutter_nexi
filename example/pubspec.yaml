@@ -3,7 +3,7 @@ description: "Demonstrates how to use the flutter_nexi plugin."
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: ^3.7.2
+  sdk: ^3.13.0
 
 dependencies:
   flutter:
@@ -13,6 +13,7 @@ dependencies:
     path: ../
 
   cupertino_icons: ^1.0.8
+  material_ui: ^1.11.1
 
 dev_dependencies:
   flutter_test:
