@@ -12,7 +12,7 @@ dependencies:
   flutter_nexi:
     path: ../
 
-  cupertino_icons: ^1.0.8
+  cupertino_icons: ^1.0.9
   material_ui: ^1.11.1
 
 dev_dependencies:
