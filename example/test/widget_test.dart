@@ -3,7 +3,7 @@
 // See https://docs.flutter.dev/cookbook/testing/widget/introduction for more
 // information about widget testing.
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutter_nexi_example/main.dart';
